@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <!-- Input fields -->
+    <EditText
+        android:id="@+id/addressInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/grey_background"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Street Address" />
+
+    <EditText
+        android:id="@+id/cityInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/grey_background"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="City" />
+
+    <EditText
+        android:id="@+id/priceInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/grey_background"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Price"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/bedroomsInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/grey_background"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Bedrooms"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/bathroomsInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/grey_background"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Bathrooms"
+        android:inputType="number" />
+
+    <!-- Add House Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addHouseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners"
+        android:text="Add House"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.demoapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.demoapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.demoapp.ui.search.SearchResultFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/detailsOfTheHouseFragment"
+        android:name="com.example.demoapp.ui.realEsate.DetailsOfTheHouseFragment"
+        android:label="fragment_details_of_the_house"
+        tools:layout="@layout/fragment_details_of_the_house" />
+    <fragment
+        android:id="@+id/vehicleFragment"
+        android:name="com.example.demoapp.ui.vehicle.VehicleFragment"
+        android:label="fragment_vehicle"
+        tools:layout="@layout/fragment_vehicle" />
+    <fragment
+        android:id="@+id/realEstateFragment"
+        android:name="com.example.demoapp.ui.realEsate.RealEstateFragment"
+        android:label="fragment_real_estate"
+        tools:layout="@layout/fragment_real_estate" >
+        <action
+            android:id="@+id/action_realEstateFragment_to_detailsOfTheHouseFragment"
+            app:destination="@id/detailsOfTheHouseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.demoapp.ui.filter.FilterHouseFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter_house" />
+</navigation>

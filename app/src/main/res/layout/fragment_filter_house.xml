@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.filter.FilterHouseFragment">
+
+    <!-- Price Range -->
+    <TextView
+        android:id="@+id/tv_price_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price Range"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_min_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min Price"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_price_range"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarMinPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="1000000"
+        android:progress="100000"
+        app:layout_constraintTop_toBottomOf="@id/tv_min_price_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_max_price_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max Price"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/seekBarMinPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarMaxPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="1000000"
+        android:progress="500000"
+        app:layout_constraintTop_toBottomOf="@id/tv_max_price_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: $100,000 - $500,000"
+        app:layout_constraintTop_toBottomOf="@id/seekBarMaxPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Number of Bedrooms -->
+    <TextView
+        android:id="@+id/tv_bedrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bedrooms"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_price_value"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_bedrooms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_bedrooms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/bedroom_options"/>
+
+    <!-- Number of Bathrooms -->
+    <TextView
+        android:id="@+id/tv_bathrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bathrooms"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_bedrooms"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_bathrooms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_bathrooms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/bathroom_options"/>
+
+    <!-- Street Address -->
+    <TextView
+        android:id="@+id/tv_street_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Street Address"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_bathrooms"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/et_street_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter street address"
+        app:layout_constraintTop_toBottomOf="@id/tv_street_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Apply Filter Button -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_apply_filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apply Filter"
+        app:layout_constraintTop_toBottomOf="@id/et_street_address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_corners"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

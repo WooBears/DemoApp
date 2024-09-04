@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.realEsate.DetailsOfTheHouseFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <!-- House Image -->
+    <ImageView
+        android:id="@+id/house_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/grey_bg"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/house_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: $450,000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <!-- Bedrooms -->
+    <TextView
+        android:id="@+id/house_bedrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bedrooms: 4"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Bathrooms -->
+    <TextView
+        android:id="@+id/house_bathrooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bathrooms: 3"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Address -->
+    <TextView
+        android:id="@+id/house_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 123 Main Street, Springfield, IL 62704"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Home Status -->
+    <TextView
+        android:id="@+id/house_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: For Sale"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Home Type -->
+    <TextView
+        android:id="@+id/house_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type: Single Family Home"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Area -->
+    <TextView
+        android:id="@+id/house_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area: 2500 sqft"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- House Unit -->
+    <TextView
+        android:id="@+id/house_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit: 1"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/house_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description: This beautiful 4-bedroom, 3-bathroom home in the heart of Springfield offers spacious living with a modern design. The home features a large kitchen with granite countertops, a cozy living room with a fireplace, and a private backyard perfect for family gatherings. Located in a quiet neighborhood, it's close to schools, parks, and shopping centers."
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="16dp" />
+
+        <!-- Contact Options -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <!-- Write to Owner Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_write_to_owner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Write to Owner"
+                android:background="@drawable/rounded_corners"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp"
+                android:padding="12dp" />
+
+            <!-- Call Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_call_owner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call"
+                android:background="@drawable/rounded_corners"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="8dp"
+                android:padding="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
